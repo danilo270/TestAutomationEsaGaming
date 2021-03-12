@@ -52,7 +52,7 @@ public class NewTest {
 	  pForm.FillNumber("1231231231");
 	  pForm.ClickDatePicker();
 	  pForm.ClickMonth("march");
-	  pForm.ClickYear("2022");
+	  pForm.ClickYear("2020");
 	  pForm.ClickDay("11");
 	  pForm.SearchSubjects("Com");
 	  pForm.SelectHobbies();
@@ -62,6 +62,7 @@ public class NewTest {
 	  pForm.SearchAndSelectCity("delhi");
 	  pForm.SubmitForm();
 	  pForm.ClosePopup();
+	  org.testng.Assert.assertEquals(true, pForm.CheckIfValid());
 	  menu.ClickFramesAndWindows();
 	  menu.ClickNestedFrames();
 	  NestedFrames nestedFrame=new NestedFrames(driver);
@@ -98,8 +99,10 @@ public class NewTest {
 	  pForm.SelectHobbies(); 
 	  pForm.UploadPicture();
 	  pForm.FillCurrentAddress("Kragujevacka 5");
-	  pForm.SearchAndSelectState("ncr"); pForm.SearchAndSelectCity("delhi");
+	  pForm.SearchAndSelectState("ncr"); 
+	  pForm.SearchAndSelectCity("delhi");
 	  pForm.SubmitForm();
+	  org.testng.Assert.assertEquals(true, pForm.CheckIfValid());
 	  try {
 		Thread.sleep(10000);
 	  		} catch (InterruptedException e) {
