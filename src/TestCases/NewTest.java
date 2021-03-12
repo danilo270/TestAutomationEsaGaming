@@ -62,7 +62,6 @@ public class NewTest {
 	  pForm.SearchAndSelectCity("delhi");
 	  pForm.SubmitForm();
 	  pForm.ClosePopup();
-	  org.testng.Assert.assertEquals(true, pForm.CheckIfValid());
 	  menu.ClickFramesAndWindows();
 	  menu.ClickNestedFrames();
 	  NestedFrames nestedFrame=new NestedFrames(driver);
@@ -102,7 +101,6 @@ public class NewTest {
 	  pForm.SearchAndSelectState("ncr"); 
 	  pForm.SearchAndSelectCity("delhi");
 	  pForm.SubmitForm();
-	  org.testng.Assert.assertEquals(true, pForm.CheckIfValid());
 	  try {
 		Thread.sleep(10000);
 	  		} catch (InterruptedException e) {
