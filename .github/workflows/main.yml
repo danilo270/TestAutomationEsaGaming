@@ -16,7 +16,7 @@ jobs:
       with:
         switches: -avzr --delete
         path: ../..
-        remote_path: /var/www/
-        remote_host: daniloradulovic.com
-        remote_user: debian
+        remote_path: /
+        remote_host: 185.27.134.11
+        remote_user: epiz_30189680
         remote_key: ${{ secrets.DEPLOY_KEY }}
