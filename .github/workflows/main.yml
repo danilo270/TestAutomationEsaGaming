@@ -16,5 +16,5 @@ jobs:
         SERVER_PORT: 22
         FOLDER: "./"
         SERVER_IP: ${{ secrets.SSH_HOST }}
-        USERNAME: ${{ daniloradulovic }}
+        USERNAME: " daniloradulovic"
         SERVER_DESTINATION: .
