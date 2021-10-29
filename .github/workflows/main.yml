@@ -9,6 +9,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
+    - name: Check PlatformIO
+      run: |
+          pio system info
     -   name: Setup SSH Keys and known_hosts
         env:
          SSH_AUTH_SOCK: /tmp/ssh_agent.sock
