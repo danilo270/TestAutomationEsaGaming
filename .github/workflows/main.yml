@@ -12,8 +12,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     
-    - name: Creating first ssh call
-      run: ssh -T git@gitlab.com
+
       
     - name: Adding Known Hosts
       run: ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts 
