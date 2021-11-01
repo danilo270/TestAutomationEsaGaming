@@ -18,10 +18,10 @@ jobs:
         known_hosts: 'just-a-placeholder-so-we-dont-get-errors'
         
     - name: Adding Known Hosts
-      run: ssh-keyscan -H  10.251.82.248. >> ~/.ssh/known_hosts
+      run: ssh-keyscan -H  10.251.82.248 >> ~/.ssh/known_hosts
     
     - name: Deploy with rsync
-      run: rsync -avz / daniloradulovic@10.251.82.248.:~/.Desktop/
+      run: rsync -avz / daniloradulovic@10.251.82.248:~/.Desktop/
       
     
         
