@@ -16,14 +16,14 @@ jobs:
       with:
         key: ${{ secrets.SSH_PRIVATE_KEY }} 
         known_hosts: 'just-a-placeholder-so-we-dont-get-errors'
-      
-    - name: Synchronize Git repository to uberspace
-      uses: AEnterprise/rsync-deploy@v1.0
-      env:
-        DEPLOY_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-        ARGS: "-avz"
-        SERVER_PORT: 22
-        FOLDER: "."
-        SERVER_IP: daniloradulovic@10.251.82.248
-        USERNAME: "daniloradulovic"
-        SERVER_DESTINATION: ./Desktop
+        
+    -  name: rsync deployments
+       uses: burnett01/rsync-deployments@5.1
+       with:
+         switches: -avzr --delete
+         path: /
+         remote_path: ~./Desktop
+         remote_host: 10.251.82.248
+         remote_user: daniloradulovic
+         remote_key: ${{ secrets.SSH_PRIVATE_KEY }}  
+         
