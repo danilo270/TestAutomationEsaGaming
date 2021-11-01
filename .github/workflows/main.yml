@@ -19,7 +19,7 @@ jobs:
         
     
     - name: Deploy with rsync
-      run: rsync -avz / daniloradulovic@$46.240.139.173:~/.Desktop/
+      run: rsync -avz / daniloradulovic@46.240.139.173:~/.Desktop/
       
     
         
