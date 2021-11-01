@@ -24,6 +24,6 @@ jobs:
         ARGS: "-avz"
         SERVER_PORT: 8080
         FOLDER: "./"
-        SERVER_IP: 10.251.82.248
+        SERVER_IP: daniloradulovic@10.251.82.248:/Desktop/
         USERNAME: " daniloradulovic"
         SERVER_DESTINATION: ./Desktop
