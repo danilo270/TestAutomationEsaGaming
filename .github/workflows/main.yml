@@ -26,6 +26,6 @@ jobs:
         remote_path: ~/.Desktop/
         remote_host: 46.240.139.173
         remote_user: daniloradulovic
-        remote_key: ${{ secrets.DEPLOY_KEY }}
+        remote_key: ${{ secrets.SSH_PRIVATE_KEY }}
         
    
