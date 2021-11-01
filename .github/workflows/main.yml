@@ -22,7 +22,7 @@ jobs:
        with:
          switches: -avzr --delete
          path: /
-         remote_path: ~./Desktop
+         remote_path: /
          remote_host: 10.251.82.248
          remote_user: daniloradulovic
          remote_key: ${{ secrets.SSH_PRIVATE_KEY }}  
