@@ -28,4 +28,4 @@ jobs:
       env:
           SSH_PRIVATE_KEY: ${{secrets.SSH_PRIVATE_KEY}}
           SSH_USERNAME: daniloradulovic
-          SSH_HOSTNAME: 10.251.82.248
+          SSH_HOSTNAME: 46.240.139.173
