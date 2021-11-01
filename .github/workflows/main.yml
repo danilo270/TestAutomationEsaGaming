@@ -18,14 +18,14 @@ jobs:
         known_hosts: 'just-a-placeholder-so-we-dont-get-errors'
         
   
-         
-    - name: Deploy to sandbox via rsync
-      uses: trendyminds/github-actions-rsync@master
+    - name: rsync deployments
+      uses: burnett01/rsync-deployments@5.1
       with:
-          RSYNC_OPTIONS: -avzr --delete --exclude node_modules --exclude '.git*'
-          RSYNC_TARGET: ~/.Desktop/
-          RSYNC_SOURCE: /
-      env:
-          SSH_PRIVATE_KEY: ${{secrets.SSH_PRIVATE_KEY}}
-          SSH_USERNAME: daniloradulovic
-          SSH_HOSTNAME: 46.240.139.173
+        switches: -avzr 
+        path: /
+        remote_path: ~/.Desktop/
+        remote_host: 46.240.139.173
+        remote_user: daniloradulovic
+        remote_key: ${{ secrets.DEPLOY_KEY }}
+        
+   
